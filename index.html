@@ -1,5 +1,4 @@
 
-# Generate dashboard with buttons
 html_content = """
 <!DOCTYPE html>
 <html>
@@ -68,8 +67,4 @@ html_content = """
     <button class="size-rating-btn" onclick="openPlot('app_size_vs_rating.html', 17, 19)">App Size vs Rating </button>
 </body>
 </html>
-"""
-with open("dashboard.html", "w", encoding="utf-8") as f:
-    f.write(html_content)
 
-webbrowser.open('file://' + os.path.realpath("dashboard.html"))
