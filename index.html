@@ -1,16 +1,20 @@
 
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Google Play Store Data Analytics</title>
     <style>
-         body {
+        body {
             background: url('https://img-s-msn-com.akamaized.net/tenant/amp/entityid/AA1mjW7J.img?w=728&h=385&m=4&q=98') no-repeat center center fixed;
             background-size: cover;
             color: white;
             text-align: center;
             font-family: Arial, sans-serif;
+        }
+        h1 {
+            margin-top: 20px;
+            font-size: 36px;
+        }
         button {
             margin: 10px;
             padding: 12px 24px;
@@ -27,20 +31,32 @@
         .sentiment-btn {
             background-color: red;
         }
-        .categories-btn {
+        .revenue-btn {
+            background-color: orange;
+        }
+        .global-btn {
             background-color: yellow;
             color: black;
         }
-        .installs-btn {
-            background-color: white;
-            color: black;
-        }
-        .filtered-btn {
+        .rating-btn {
             background-color: green;
+        }
+        .free-paid-btn {
+            background-color: cyan;
             color: black;
         }
-        .size-rating-btn {
+        .monthly-btn {
+            background-color: purple;
+        }
+        .growth-btn {
+            background-color: pink;
+            color: black;
+        }
+        .correlation-btn {
             background-color: blue;
+        }
+        .bubble-btn {
+            background-color: brown;
         }
     </style>
     <script>
@@ -51,20 +67,27 @@
             if (hours >= startHour && hours < endHour) {
                 window.open(filename, '_blank');
             } else {
-                alert(This feature is only available between ${startHour}:00 and ${endHour}:00.);
+                alert(`This feature is only available between ${startHour}:00 and ${endHour}:00.`);
             }
         }
     </script>
 </head>
-<body style='background-color: black; color: white; text-align: center;'>
-    <h1><img src='https://tse4.mm.bing.net/th?id=OIP.aK0pFHbj6X0jqS0ZGmqGmAHaEK&pid=Api&P=0&h=180' alt='Google Play Store Logo' width='50' style='vertical-align: middle;'> Google Play Store Data Analytics</h1>
+<body>
+    <h1>
+        <img src='https://tse4.mm.bing.net/th?id=OIP.aK0pFHbj6X0jqS0ZGmqGmAHaEK&pid=Api&P=0&h=180' alt='Google Play Store Logo' width='50' style='vertical-align: middle;'>
+        Google Play Store Data Analytics
+    </h1>
     
-    <!-- Each button has its own time window and color -->
-    <button class="sentiment-btn" onclick="openPlot('app_rating_distribution.html', 00, 24)">Sentiment Distribution </button>
-    <button class="categories-btn" onclick="openPlot('top_categories.html', 15, 17)">Top Categories </button>
-    <button class="installs-btn" onclick="openPlot('global_installs.html', 18, 20)">Global Installs </button>
-    <button class="filtered-btn" onclick="openPlot('filtered_apps.html', 16, 18)">Filtered Apps </button>
-    <button class="size-rating-btn" onclick="openPlot('app_size_vs_rating.html', 17, 19)">App Size vs Rating </button>
+    <!-- Buttons with original links -->
+    <button class="sentiment-btn" onclick="openPlot('file:///C:/Users/ADMIN/Downloads/Sentiment%20Distribution.html', 0, 24)">Sentiment Distribution</button>
+    <button class="revenue-btn" onclick="openPlot('file:///C:/Users/ADMIN/Downloads/Revenue%20vs%20Installs.html', 15, 17)">Revenue vs Installs</button>
+    <button class="global-btn" onclick="openPlot('file:///C:/Users/ADMIN/Downloads/Global_Installs_by_Category.html', 18, 20)">Global Installs</button>
+    <button class="rating-btn" onclick="openPlot('file:///C:/Users/ADMIN/Downloads/Average%20Rating%20and%20Total%20Reviews.html', 15, 17)">Category Ratings & Reviews</button>
+    <button class="free-paid-btn" onclick="openPlot('file:///C:/Users/ADMIN/Downloads/Average%20Installs%20and%20Revenue.html', 13, 14)">Free vs Paid Apps</button>
+    <button class="monthly-btn" onclick="openPlot('file:///C:/Users/ADMIN/Downloads/monthly_installs_trend_task.html', 18, 21)">Total Installs Over Time</button>
+    <button class="growth-btn" onclick="openPlot('file:///C:/Users/ADMIN/Downloads/Monthly%20Revenue%20Trend%20for%20Top%205%20Paid%20App%20Categories.html', 16, 18)">Ratings Distribution</button>
+    <button class="correlation-btn" onclick="openPlot('file:///C:/Users/ADMIN/Downloads/correlation_matrix.html', 14, 16)">Correlation Matrix</button>
+    <button class="bubble-btn" onclick="openPlot('file:///C:/Users/ADMIN/Downloads/app_size_vs_rating.html', 17, 24)">App Size vs Rating</button>
 </body>
 </html>
 
